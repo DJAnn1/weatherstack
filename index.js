@@ -13,7 +13,6 @@ fetch(`http://api.weatherstack.com/current?${params.toString()}`)
             return;
         }
 
-        // Update the HTML with weather data
         document.getElementById('location').textContent = data.location.name;
         document.getElementById('temperature').textContent = data.current.temperature;
         document.getElementById('weather-description').textContent = data.current.weather_descriptions[0];
@@ -26,7 +25,8 @@ fetch(`http://api.weatherstack.com/current?${params.toString()}`)
     });
 
 document.addEventListener("DOMContentLoaded", function() {
-    let temperature = 60; // Example value
+    //let temperature = 60;
+    let temperature = document.getElementById('temperature').textContent = data.current.temperature;
 
     if (temperature < 65) {
         document.body.style.backgroundImage = "url('./pictures/sunny.jpg')";
