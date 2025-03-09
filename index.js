@@ -26,12 +26,12 @@ fetch(`http://api.weatherstack.com/current?${params.toString()}`)
 
 document.addEventListener("DOMContentLoaded", function() {
     //let temperature = 60;
-    let temperature = document.getElementById('temperature').textContent = data.current.temperature;
+    let temperature = data.current.temperature;
 
     if (temperature < 65) {
+        document.body.style.backgroundImage = "url('./pictures/chilly.jpg')";
+    }
+    else if (temperature > 65) {
         document.body.style.backgroundImage = "url('./pictures/sunny.jpg')";
     }
 });
-
-console.log("Temperature:", temperature);
-console.log("Image Path:", './pictures/sunny.jpg');
