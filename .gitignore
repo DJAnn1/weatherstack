@@ -1,6 +1,7 @@
 #config api keys and other stuff
 .env
 node_modules/
+readME.txt
 
 .vscode/*
 !.vscode/settings.json
